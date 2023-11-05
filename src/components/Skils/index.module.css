@@ -1,0 +1,24 @@
+.box{
+    background-color:aquamarine;
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    height: 90vh;
+    align-content: center;
+    justify-content: center;
+}
+.boxAbout{
+}
+.name{
+    font-size: 56px;
+    padding: 1rem;
+}
+.about{
+    padding: 3rem;
+
+}
+.boxImg{
+    margin: 3rem;
+}
+.boxImg img {
+    width: 250px;
+}
