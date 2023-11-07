@@ -1,0 +1,26 @@
+.header {
+    /* background-color: var(--background-header); */
+    height: 70px;
+    display: grid;
+    grid-template-columns: .7fr .3fr;
+    align-items: center;
+}
+.header .headerList {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+}
+.header .headerList li a {
+    color: var(--text-header);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.header .headerList li a:hover {
+    color: var(--hover-header);
+}
+.header .mode{
+    font-size: 20px;
+    color: yellow;
+    text-align: end;
+    padding-right: 25px;
+}
