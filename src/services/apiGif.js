@@ -1,17 +1,20 @@
+const api_key = '';
 
-import axios from "axios";
-const api_key = '0MscRsk2QogUK8Dgq7mtSnGB0UFAmCgY';
+export default async function apiGif() {
+  try {
+    const response = await fetch(
+      `https://api.giphy.com/v1/gifs/random?api_key=${api_key}&tag=monkey`
+    );
 
-async function giphyApi() {
-    try {
-        const urlRandom = `https://api.giphy.com/v1/gifs/random?api_key=${api_key}&tag=monkey&rating=g`
-        const response = await axios.get(urlRandom);
-        const data = response.data.data.images.original; // Accede a la matriz de gifs en la respuesta
-        const mp4Url = data.mp4.toString()
-        return mp4Url 
-    } catch (error) {
-        console.error('Error:', error);
+    if (!response.ok) {
+      throw new Error('Request failed with status: ' + response.status);
     }
-}
 
-export { giphyApi }
+    const data = await response.json();
+    const mp4Url = data.data.images.original.url;
+    return mp4Url;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
