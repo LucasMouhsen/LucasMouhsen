@@ -1,24 +1,30 @@
-.box{
-    background-color:aqua;
-    display: grid;
-    font-family: 'Montserrat', sans-serif;
-    height: 90vh;
-    align-content: center;
-    justify-content: center;
+.boxProyects{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-projets);
 }
-.boxAbout{
-}
-.name{
-    font-size: 56px;
+.boxProyects .boxAbout{
+    width: 100%;
     padding: 1rem;
 }
-.about{
-    padding: 3rem;
-
+.boxProyects .boxAbout .name{
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
 }
-.boxImg{
-    margin: 3rem;
+.boxProyects .boxImg{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;  
+    gap: 2rem;
 }
-.boxImg img {
-    width: 250px;
+.boxProyects .boxImg img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.boxProyects .boxImg p{
+    color: #ffffffb3;
 }
