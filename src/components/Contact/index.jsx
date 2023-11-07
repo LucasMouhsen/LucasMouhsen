@@ -1,16 +1,109 @@
 
+import { Form, Col, Alert } from 'react-bootstrap';
+import { Formik, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import styles from "./index.module.css"
-export default function Contact() {
-    return (
-        <div className={styles.box} id="contact">
-            <div className={styles.boxAbout}>
-                <h1 className={styles.name}>Contacto</h1>
-                <p className={styles.About}>Analista de Datos y Procesos en la Municipalidad de San Miguel, con 26 años de edad y una formación autodidacta en programación y complementada con un curso intensivo de desarrollador full stack en Digital House.</p>
-            </div>
-            <div className={styles.boxImg}>
-                <img src="/images/yo.png" width={100} alt="Lucas Diaz Mouhsen" />
-            </div>
 
+export default function Contact() {
+    const initialValues = {
+        strName: '',
+        strMail: '',
+        strText: '',
+    }
+
+    const validationSchema = Yup.object({
+        strName: Yup.string().required('El campo nombre es obligatorio'),
+        strMail: Yup.string().required('El campo mail es obligatorio'),
+        strText: Yup.string().required('El campo mensaje es obligatorio'),
+    })
+    const handleSubmit = (values) => {
+        console.log(values);
+    }
+    return (
+        <div className={styles.boxContact} id="contact">
+            <div className={styles.boxTittle}>
+                <h1 className={styles.name}>CONTACTO</h1>
+            </div>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+            >
+
+                {
+                    (formik) => (
+                        <Form onSubmit={formik.handleSubmit}>
+                            {
+                                formik.status && (
+                                    <Alert variant='danger' className='text-danger'>
+                                        {formik.status}
+                                    </Alert>
+                                )
+                            }
+                            <div>
+                                <Col md={3}>
+                                    <Form.Group className='mb-3'>
+                                        <Field
+                                            id="strName"
+                                            placeholder="Tu Nombre"
+                                            name="strName"
+                                            as={Form.Control}
+                                        />
+                                        <ErrorMessage
+                                            name="strName"
+                                            component={Form.Text}
+                                            className='text-danger'
+                                        />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col md={3}>
+                                    <Form.Group className='mb-3'>
+                                        <Field
+                                            id="strMail"
+                                            placeholder="Tu Mail"
+                                            name="strMail"
+                                            as={Form.Control}
+                                        />
+                                        <ErrorMessage
+                                            name="strMail"
+                                            component={Form.Text}
+                                            className='text-danger'
+                                        />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col md={3}>
+                                    <Form.Group className='mb-3'>
+                                        <Field
+                                            id="strText"
+                                            placeholder="Tu Mensaje"
+                                            name="strText"
+                                            as={Form.Control}
+                                        />
+                                        <ErrorMessage
+                                            name="strText"
+                                            component={Form.Text}
+                                            className='text-danger'
+                                        />
+                                    </Form.Group>
+                                </Col>
+                            </div>
+                            <div className=''>
+                                <Col md={3}>
+                                    <button
+                                        className='btn btn-light w-50'
+                                        type='submit'
+                                    >
+                                        {"Enviar Mensaje"}
+                                    </button>
+                                </Col>
+                            </div>
+                        </Form>
+                    )
+                }
+
+            </Formik>
         </div>
     )
 }

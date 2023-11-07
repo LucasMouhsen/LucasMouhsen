@@ -1,25 +1,15 @@
-.box{
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-columns: .7fr .3fr;
-    font-family: 'Montserrat', sans-serif;
-    height: 90vh;
-    align-content: center;
-    justify-content: center;
+.boxContact{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-projets);
 }
-.boxAbout{
-}
-.name{
-    font-size: 56px;
+.boxContact .boxTittle{
+    width: 100%;
     padding: 1rem;
 }
-.about{
-    padding: 3rem;
-
-}
-.boxImg{
-    margin: 3rem;
-}
-.boxImg img {
-    width: 250px;
+.boxContact .boxTittle .name{
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
 }
