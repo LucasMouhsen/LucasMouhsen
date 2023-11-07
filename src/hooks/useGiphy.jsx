@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { GiphyContext } from "../context/GiphyProvider";
 
-export function useGiphy (){
+export default function useGiphy (){
     return useContext( GiphyContext )
 }
