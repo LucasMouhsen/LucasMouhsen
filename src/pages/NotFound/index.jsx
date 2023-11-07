@@ -1,18 +1,17 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { useGiphy } from "../../hooks/useGiphy";
-
+import useGiphy from '../../hooks/useGiphy';
+import './index.css'
 export default function NotFound() {
-  const gif  = useGiphy()
-  console.log(gif);
+
+  const { gif } = useGiphy()
+
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1 className="text-center">404</h1>
-          <h1 className="text-center">Page not found</h1>
-          <video src={gif} autoPlay></video>
-        </Col>
-      </Row>
-    </Container>
+    <main className="notFound">
+      <h1 className="error">404</h1>
+      <h1 className="desc">Page not found</h1>
+      <div className='boxGif'>
+
+        <img className='gif' src={gif} alt="Gif" />
+      </div>
+    </main>
   );
 }
