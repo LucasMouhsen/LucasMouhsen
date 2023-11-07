@@ -1,25 +1,29 @@
 .box{
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-columns: .7fr .3fr;
-    font-family: 'Montserrat', sans-serif;
-    height: 90vh;
-    align-content: center;
-    justify-content: center;
+    
+    width: 100%;
+    height: 100vh;
 }
 .boxAbout{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 30%;
+    gap: 2rem;
+}
+.nameAbout{
+    align-self: center;
+    margin: 3rem;
+    text-align: center;
 }
 .name{
-    font-size: 56px;
+    font-size: 76px;
     padding: 1rem;
+    color: #fff;
 }
 .about{
-    padding: 3rem;
-
+    font-size: 15px;
+    color: #ffffffb3;
 }
 .boxImg{
-    margin: 3rem;
-}
-.boxImg img {
-    width: 250px;
+    background-color: transparent;
 }
