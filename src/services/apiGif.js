@@ -1,4 +1,5 @@
-const api_key = '';
+
+const api_key = import.meta.env.VITE_API_GIPHY_KEY;
 
 export default async function apiGif() {
   try {
