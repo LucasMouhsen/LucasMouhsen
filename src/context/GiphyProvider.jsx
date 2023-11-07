@@ -1,29 +1,39 @@
-import { createContext, useState } from "react";
-import { giphyApi } from "../services/apiGif";
+import { createContext, useState, useEffect } from "react";
 import PropTypes from 'prop-types';
+import apiGif from "../services/apiGif";
 
-const GiphyContext = createContext()
+const GiphyContext = createContext();
 
 const GiphyProvider = ({ children }) => {
-    const [gif, setGif] = useState([])
+    const [gif, setGif] = useState(null);
 
     const getGifGiphy = async () => {
-        const link = await giphyApi()
-        return setGif(link)
-    }
+        try {
+            const data = await apiGif();
+            setGif(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        getGifGiphy();
+    }, []);
+
     const contextValues = {
+        getGifGiphy,
         gif,
-        getGifGiphy
-    }
+    };
+
     return (
         <GiphyContext.Provider value={contextValues}>
             {children}
         </GiphyContext.Provider>
-    )
-}
+    );
+};
+
 GiphyProvider.propTypes = {
     children: PropTypes.node.isRequired
-}
+};
 
-
-export { GiphyContext, GiphyProvider }
+export { GiphyContext, GiphyProvider };
