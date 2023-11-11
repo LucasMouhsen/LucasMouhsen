@@ -1,18 +1,23 @@
 .box{
-    
+    background-color: var(--background-skills);
     width: 100%;
     height: 100vh;
 }
 .boxAbout{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 50% 30%;
+    padding: 2rem;
     gap: 2rem;
 }
 .nameAbout{
+    background-color: rgb(41, 40, 57);
+    width: 100%;
+    height: 80%;
     align-self: center;
-    margin: 3rem;
     text-align: center;
 }
 .name{
@@ -25,5 +30,15 @@
     color: #ffffffb3;
 }
 .boxImg{
-    background-color: transparent;
+    background-color: rgb(41, 40, 57);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+.img{
+    width: 80%;
+    max-width: 320px;
 }
