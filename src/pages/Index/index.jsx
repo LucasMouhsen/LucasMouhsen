@@ -4,11 +4,13 @@ import Proyects from "../../components/Proyects";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
 import "./index.css"
+import Home from "../../components/home";
 
-export default function Home() {
+export default function Index() {
     return (
-        <main className="home">
+        <main className="index">
             <Header/>
+            <Home/>
             <About/>
             <Skills/>
             <Proyects/>
