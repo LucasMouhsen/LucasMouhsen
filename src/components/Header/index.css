@@ -1,9 +1,18 @@
 .header {
-    /* background-color: var(--background-header); */
-    height: 70px;
+    position: fixed;
+    height: 60px;
+    width: 100vw;
     display: grid;
     grid-template-columns: .7fr .3fr;
     align-items: center;
+}
+.headerWhite{
+    background-color: var(--background-header);
+    transition: all 0.3s;
+}
+.headerTransparent{
+    background-color: transparent;
+    transition: all 0.3s;
 }
 .header .headerList {
     display: flex;
