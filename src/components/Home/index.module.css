@@ -1,0 +1,42 @@
+.box {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(
+    to right,
+    #76a67e 10%,
+    #7ba39c 20%,
+    #6c87bf 30%,
+    #5167a8 40%,
+    #56599d 50%,
+    #625398 60%,
+    #985999 70%,
+    #b74681 80%,
+    #d04e74 90%
+  );
+  border-image-slice: 1;
+}
+.boxHome {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 30%;
+  gap: 2rem;
+}
+.nameHome {
+  align-self: center;
+  margin: 3rem;
+  text-align: center;
+}
+.name {
+  font-size: 76px;
+  padding: 1rem;
+  color: #fff;
+}
+.Home {
+  font-size: 15px;
+  color: #ffffffb3;
+}
+.boxImg {
+  background-color: transparent;
+}
