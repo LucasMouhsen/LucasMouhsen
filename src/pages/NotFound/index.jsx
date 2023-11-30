@@ -2,7 +2,9 @@ import useGiphy from '../../hooks/useGiphy';
 import './index.css'
 export default function NotFound() {
 
-  const { gif } = useGiphy()
+  console.log("NotFound rendered");
+  const { gif } = useGiphy();
+  console.log("Gif: ", gif);
 
   return (
     <main className="notFound">
