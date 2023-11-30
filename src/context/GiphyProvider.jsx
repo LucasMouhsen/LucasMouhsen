@@ -17,11 +17,11 @@ const GiphyProvider = ({ children }) => {
     };
 
     useEffect(() => {
+        console.log("GiphyProvider useEffect");
         getGifGiphy();
     }, []);
 
     const contextValues = {
-        getGifGiphy,
         gif,
     };
 
