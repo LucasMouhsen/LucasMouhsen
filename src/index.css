@@ -16,6 +16,11 @@
   --background-projets: #1e1e1f;
   /* CONTACT */
   --background-contact: #1e1e1f;
+  --background-color: #1e1e1f;
+
+  
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
 }
 
 * {
@@ -50,4 +55,22 @@ a {
 }
 ::-webkit-scrollbar-track {
   background-color: #1e1e1fe5; 
+}
+
+/* TEMA CLARO */
+[data-theme='light'] {
+  --background-color: #faebd7;
+  --background-header: #1e1e1fe5;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+  --background-header: #1e1e1fe5;
+  --hover-header: #ff6200;
+  --text-header: #faebd7;
+}
+
+/* SCROLLING */
+[data-scrolling='scroll']{
+  --background-header: #faebd7;
+  --hover-header: #ff6200;
+  --text-header: #1e1e1fe5;
 }

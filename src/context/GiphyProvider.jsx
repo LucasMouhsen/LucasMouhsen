@@ -17,7 +17,6 @@ const GiphyProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        console.log("GiphyProvider useEffect");
         getGifGiphy();
     }, []);
 

@@ -38,5 +38,7 @@
   color: #ffffffb3;
 }
 .boxImg {
-  background-color: transparent;
+  background-image: url('/public/images/IMG-20240111-WA0034.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
