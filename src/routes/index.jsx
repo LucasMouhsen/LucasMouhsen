@@ -6,7 +6,7 @@ export default function AppRoutes() {
     return (
         <Router>
             <Routes>
-                <Route path="/portfolio" element={<Index/>}/>
+                <Route path="/" element={<Index/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </Router>
