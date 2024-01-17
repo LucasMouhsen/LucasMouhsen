@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://lucasmouhsen.github.io/Portfolio/
+      url: https://lucasmouhsen.github.io/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
