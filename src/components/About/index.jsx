@@ -9,10 +9,10 @@ export default function About() {
                     <p className={styles.about}>Info personal</p>
                 </div>
                 <div className={styles.boxImg}>
-                    <img className={styles.img} src="/images/yo.png" alt="Lucas Diaz Mouhsen" />
-                    <img className={styles.img} src="/images/yo2.png" alt="Lucas Diaz Mouhsen" />
-                    <img className={styles.img} src="/images/yo3.png" alt="Lucas Diaz Mouhsen" />
-                    <img className={styles.img} src="/images/yo4.png" alt="Lucas Diaz Mouhsen" />
+                    <img className={styles.img} src="/public/images/yo.png" alt="Lucas Diaz Mouhsen" />
+                    <img className={styles.img} src="/public/images/yo2.png" alt="Lucas Diaz Mouhsen" />
+                    <img className={styles.img} src="/public/images/yo3.png" alt="Lucas Diaz Mouhsen" />
+                    <img className={styles.img} src="/public/images/yo4.png" alt="Lucas Diaz Mouhsen" />
                 </div>
 
             </div>

@@ -8,15 +8,15 @@ export default function Proyects() {
             </div>
             <div className={styles.boxImg}>
                 <div>
-                    <img src="/images/" width={100} alt="React Drinks" />
+                    <img src="/public/images/" width={100} alt="React Drinks" />
                     <p>React Drinks</p>
                 </div>
                 <div>
-                    <img src="/images/" width={100} alt="ALi Music" />
+                    <img src="/public/images/" width={100} alt="ALi Music" />
                     <p>ALi Music</p>
                 </div>
                 <div>
-                    <img src="/images/" width={100} alt="Registo HC" />
+                    <img src="/public/images/" width={100} alt="Registo HC" />
                     <p>Registo HC</p>
                 </div>
             </div>
