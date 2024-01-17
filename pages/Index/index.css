@@ -1,0 +1,7 @@
+.index {
+  /* background-image: url('./images/bg.png'); */
+  background: var(--background-color);
+  transition: all .3s;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

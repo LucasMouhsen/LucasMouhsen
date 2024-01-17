@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+:root {
+  --font-family: 'Jost', sans-serif;
+  --background-tittle: #faebd7;
+  --boxImgtext: #ffffffb3;
+  /* HEADER */
+  --background-header: #1e1e1fe5;
+  --hover-header: #ff6200;
+  --text-header: #faebd7;
+  /* ABOUT */
+  --background-skills: #1e1e1f ;
+  /* SKILLS */
+  --background-skills: #1e1e1f;
+  /* PROJECTS */
+  --background-projets: #1e1e1f;
+  /* CONTACT */
+  --background-contact: #1e1e1f;
+  --background-color: #1e1e1f;
+
+  
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+}
+
+li, ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1e1e1f; 
+  border-radius: 2px; 
+}
+::-webkit-scrollbar-track {
+  background-color: #1e1e1fe5; 
+}
+
+/* TEMA CLARO */
+[data-theme='light'] {
+  --background-color: #faebd7;
+  --background-header: #1e1e1fe5;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+  --background-header: #1e1e1fe5;
+  --hover-header: #ff6200;
+  --text-header: #faebd7;
+}
+
+/* SCROLLING */
+[data-scrolling='scroll']{
+  --background-header: #faebd7;
+  --hover-header: #ff6200;
+  --text-header: #1e1e1fe5;
+}

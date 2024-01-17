@@ -1,0 +1,29 @@
+.boxSkills{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-skills);
+}
+.boxSkills .boxAbout{
+    width: 100%;
+    padding: 1rem;
+}
+.boxSkills .boxAbout .name{
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
+}
+.boxSkills .boxImg{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.boxSkills .boxImg img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.boxSkills .boxImg p{
+    color: var(--boxImgtext);
+}
