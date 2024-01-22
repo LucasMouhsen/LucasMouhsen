@@ -6,6 +6,7 @@
     grid-template-columns: .7fr .3fr;
     align-items: center;
     background-color: var(--background-header);
+    z-index: 999;
 }
 .headerWhite{
     background-color: var(--background-header);
