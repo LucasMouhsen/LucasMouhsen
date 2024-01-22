@@ -1,0 +1,128 @@
+/* .boxProyects{
+    width: 100%;
+    height: 100vh;
+}
+.boxProyects .boxAbout{
+    width: 100%;
+    padding: 1rem;
+}
+.boxProyects .boxAbout .name{
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
+}
+.boxProyects .boxImg{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;  
+    gap: 2rem;
+}
+.boxProyects .boxImg img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.boxProyects .boxImg p{
+    color: #ffffffb3;
+} */
+
+:root {
+    /* Colours */
+    --color-text: #fff;
+    --color-primary: #283452;
+    ;
+    --color-secondary: #19376d;
+    --color-dark: #0b2447;
+    --color-bg: #04152d;
+
+    /* Fonts */
+    --font-roboto: "Roboto";
+}
+
+.container {
+    width: 100%;
+}
+.container .boxAbout{
+    width: 100%;
+    padding: 1rem;
+}
+.container .boxAbout .name{
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem;
+    color: var(--color-text);
+}
+.containerProject{
+    width: 45%;
+    border-radius: 15px;
+    border: #292839 1px solid;
+    box-shadow: 0 16px 14px 0 #292839;
+}
+.content{
+    padding: 1rem;
+}
+.image {
+    margin-bottom: 26px;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.description {
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.skills {
+    width: 100%;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 22px;
+    gap: 1rem;
+}
+
+.skill {
+    font-size: 25px;
+    font-weight: 400;
+    background: var(--color-dark);
+    padding: 4px 22px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.links {
+    width: 100%;
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    color: var(--color-text);
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 100px;
+    background: var(--color-primary);
+    padding: 0.375rem 0.75rem;
+    width: 50%;
+}
