@@ -1,11 +1,11 @@
 import Header from "../../components/Header";
 import About from "../../components/About";
-import Proyects from "../../components/Proyects";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
 import "./index.css"
 import Home from "../../components/home";
 import { useDark } from "../../hooks/useDark";
+import { Projects } from "../../components/Projects";
 
 export default function Index() {
     const {isBackgroundDark } = useDark() /* Trae datos del providerDark */
@@ -15,7 +15,7 @@ export default function Index() {
             <Home/>
             <About/>
             <Skills/>
-            <Proyects/>
+            <Projects/>
             <Contact/>
         </main>
     )
