@@ -1,7 +1,6 @@
 .boxSkills{
     width: 100%;
     height: 100vh;
-    background-color: var(--background-skills);
 }
 .boxSkills .boxAbout{
     width: 100%;
