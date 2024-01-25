@@ -1,12 +1,16 @@
-.boxContact{
+.boxContact {
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 1;
 }
-.boxContact .boxTittle{
+
+.boxContact .boxTittle {
     width: 100%;
     padding: 1rem;
 }
-.boxContact .boxTittle .name{
+
+.boxContact .boxTittle .name {
     font-size: 64px;
     text-align: center;
     width: 100%;

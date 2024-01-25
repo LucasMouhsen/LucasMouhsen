@@ -20,7 +20,7 @@ export default function Contact() {
         console.log(values);
     }
     return (
-        <div className={styles.boxContact} id="contact">
+        <section className={styles.boxContact} id="contact">
             <div className={styles.boxTittle}>
                 <h1 className={styles.name}>CONTACTO</h1>
             </div>
@@ -104,6 +104,6 @@ export default function Contact() {
                 }
 
             </Formik>
-        </div>
+        </section>
     )
 }
