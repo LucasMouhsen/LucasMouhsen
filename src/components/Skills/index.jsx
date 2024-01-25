@@ -2,7 +2,7 @@
 import styles from "./index.module.css"
 export default function Skills() {
     return (
-        <div className={styles.boxSkills} id="skills">
+        <section className={styles.boxSkills} id="skills">
             <div className={styles.boxAbout}>
                 <h1 className={styles.name}>Skills</h1>
             </div>
@@ -37,6 +37,6 @@ export default function Skills() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
