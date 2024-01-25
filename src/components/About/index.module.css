@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
 }
+
 .boxAbout{
     display: grid;
     align-items: center;
@@ -11,6 +12,8 @@
     height: 100%;
     padding: 2rem;
     gap: 2rem;
+    position: relative;
+    z-index: 1 ;
 }
 .nameAbout{
     background-color: rgb(41, 40, 57);

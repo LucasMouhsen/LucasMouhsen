@@ -2,7 +2,7 @@
 import styles from "./index.module.css"
 export default function About() {
     return (
-        <div className={styles.box} id="about">
+        <section className={styles.box} id="about">
             <div className={styles.boxAbout}>
                 <div className={styles.nameAbout}>
                     <h1 className={styles.name}>Acerca de mi</h1>
@@ -16,6 +16,6 @@ export default function About() {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
