@@ -27,7 +27,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className={'header'} data-scrolling={!scrolling ? "no-scroll" : "scroll"}>
+    <header className={'header'} data-scrolling={!scrolling ? "no-scroll" : "scroll"}>
       <ul className='headerList'>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#about">Acerca de</a></li>
@@ -45,6 +45,6 @@ export default function Header() {
           />
           <label htmlFor="check"></label>
         </div>
-    </div>
+    </header>
   );
 }
