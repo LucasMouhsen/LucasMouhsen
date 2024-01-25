@@ -2,25 +2,36 @@
 
 :root {
   --font-family: 'Jost', sans-serif;
+  --background-color: #16191d;
   --background-tittle: #faebd7;
-  --boxImgtext: #ffffffb3;
   /* HEADER */
-  --background-header: transparent;
-  --hover-header: #ff6200;
-  --text-header: #faebd7;
+  --background-header: hsl(214deg 14% 10% / 65%);
+  --hover-header: #5167a8;
+  --text-header: #fff;
+  /* HOME */
+  --text-name: #fff;
   /* ABOUT */
   --background-skills: #1e1e1f;
   /* SKILLS */
   --background-skills: #1e1e1f;
+  --boxImgtext: #ffffffb3;
   /* PROJECTS */
   --background-projets: #1e1e1f;
+  /* Colours */
+  --color-text: #fff;
+  --color-primary: #283452;
+  ;
+  --color-secondary: #19376d;
+  --color-dark: #0b2447;
+  --color-bg: #04152d;
+  /* Fonts */
+  --font-roboto: "Roboto";
   /* CONTACT */
   --background-contact: #1e1e1f;
-  --background-color: #1e1e1f;
-
-
+  /* TOGGLE */
   --toggle-bg: #283452;
   --toggle-fg: #00a6ff;
+  
 }
 
 * {
@@ -46,34 +57,33 @@ ul {
 a {
   text-decoration: none !important;
 }
-
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #1e1e1f;
   border-radius: 2px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: #1e1e1fe5;
 }
-
 /* TEMA CLARO */
 [data-theme='light'] {
-  --background-color: #faebd7;
-  --background-header: #faebd7;
+  --background-color: #f1f3f5;
+  /* HEADER */
+  --hover-header: #ffd000;
+  
+  /* HOME */
+  --text-name: #1e1e1fe5;
+  /* TOGGLE */
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
-  --hover-header: #ff6200;
-  --text-header: #faebd7;
-  --text-header: #1e1e1fe5;
 }
 
 /* SCROLLING */
-[data-scrolling='scroll'] {
-  --background-header: #faebd7;
+/* [data-scrolling='scroll'] {
+  --background-header: hsl(214deg 14% 10% / 65%);
   --hover-header: #ff6200;
-  --text-header: #1e1e1fe5;
-}
+  --text-header: #fff;
+} */
