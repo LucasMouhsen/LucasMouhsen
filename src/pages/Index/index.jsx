@@ -3,11 +3,12 @@ import About from "../../components/About";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
 import Water from "../../components/Water";
-import Home from "../../components/Home";   
+import Home from "../../components/Home";
 import "./index.css"
 import { useDark } from "../../hooks/useDark";
 import { Projects } from "../../components/Projects";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import scrolling from "../../utils/scrolling";
 
 
 export default function Index() {
@@ -39,6 +40,24 @@ export default function Index() {
             window.removeEventListener('mousemove', handleMouseMove);
         };
     }, [isBackgroundDark]);
+
+    const [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+            // Evitar el comportamiento de scroll predeterminado
+            scrolling(event, isScrolling, setIsScrolling)
+        };
+
+        window.addEventListener('wheel', handleScroll, { passive: false });
+
+        // Remover el event listener cuando el componente se desmonta
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, [isScrolling]);
+
+
 
     return (
         <main className="index" data-theme={!isBackgroundDark ? "dark" : "light"}>{/* Tema claro y oscuro */}

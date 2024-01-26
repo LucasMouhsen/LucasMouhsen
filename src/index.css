@@ -60,18 +60,12 @@ a {
 }
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #1e1e1f;
-  border-radius: 2px;
-}
-::-webkit-scrollbar-track {
-  background-color: #1e1e1fe5;
+  display: none;
 }
 /* TEMA CLARO */
 [data-theme='light'] {
   --background-color: #f1f3f5;
+  --color-title: #1e1e1fe5;
   /* HEADER */
   --hover-header: #ffd000;
   
