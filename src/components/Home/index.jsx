@@ -7,7 +7,7 @@ const Home = () => {
             <div className={styles.boxHome}>
                 <div className={styles.nameHome}>
                     <h1 className={styles.name}>
-                        <span>Lucas Diaz Mouhsen</span>
+                        Lucas Diaz Mouhsen
                     </h1>
                     <p className={styles.description}>Desarrollador {' '}
                         <Typewriter

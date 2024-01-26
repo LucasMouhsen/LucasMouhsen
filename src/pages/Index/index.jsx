@@ -2,11 +2,11 @@ import Header from "../../components/Header";
 import About from "../../components/About";
 import Skills from "../../components/Skills";
 import Contact from "../../components/Contact";
+import Water from "../../components/Water";
+import Home from "../../components/Home";   
 import "./index.css"
-import Home from "../../components/home";
 import { useDark } from "../../hooks/useDark";
 import { Projects } from "../../components/Projects";
-import Water from "../../components/Water";
 import { useEffect } from "react";
 
 
@@ -29,7 +29,7 @@ export default function Index() {
 
             circle.style.left = `${backgroundX - circleRect.width / 2}px`;
             circle.style.top = `${backgroundY - circleRect.height / 2}px`;
-            circle.style.background = `radial-gradient(circle at ${deltaX}px ${deltaY}px, #283452, transparent 50%)`;
+            circle.style.background = `radial-gradient(circle at ${deltaX}px ${deltaY}px, #w, transparent 50%)`;
 
         };
 

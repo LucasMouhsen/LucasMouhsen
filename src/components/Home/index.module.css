@@ -16,6 +16,7 @@
   position: relative;
   z-index: 1;
 }
+
 .boxHome {
   width: 100%;
   height: 100%;
@@ -35,21 +36,19 @@
 .name {
   font-size: 76px;
   padding: 1rem;
+  color: #5167a8;
 }
+
 .description {
   font-size: 36px;
 }
 
-span {
+.description > * {
   color: #5167a8;
 }
 
 
 .boxImg {
-  /* background-image: url('/images/IMG-20240111-WA0034.jpg');
-  background-repeat: no-repeat;
-  background-position: center; */
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,4 +60,26 @@ span {
   border-radius: 50%;
   border: 4px solid #5167a8;
   filter: saturate(0.7);
+}
+
+@media only screen and (max-width: 600px) {
+  .boxHome {
+    grid-template-columns: 1fr;
+  }
+  .nameHome {
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .boxImg {
+    display: none;
+  }
+  .description > * {
+    display: flex;
+    width: 300px;
+  }
+  .description > *:last-child{
+    display: none;
+  }
 }
