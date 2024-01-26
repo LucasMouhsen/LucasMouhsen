@@ -1,9 +1,21 @@
-.box{
+.box {
     width: 100%;
     height: 100vh;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right,
+            #76a67e 10%,
+            #7ba39c 20%,
+            #6c87bf 30%,
+            #5167a8 40%,
+            #56599d 50%,
+            #625398 60%,
+            #985999 70%,
+            #b74681 80%,
+            #d04e74 90%);
+    border-image-slice: 1;
 }
 
-.boxAbout{
+.boxAbout {
     display: grid;
     align-items: center;
     justify-content: space-between;
@@ -13,39 +25,49 @@
     padding: 2rem;
     gap: 2rem;
     position: relative;
-    z-index: 1 ;
+    z-index: 1;
 }
-.nameAbout{
-    background-color: rgb(41, 40, 57);
+
+.nameAbout {
+    /* background-color: rgb(41, 40, 57); */
     width: 100%;
     height: 80%;
     align-self: center;
-    text-align: center;
+    margin: 20px;
 }
-.name{
-    font-size: 76px;
+
+.name {
+    font-size: 56px;
     padding: 1rem;
-    color: #fff;
+    color: var(--title-about);
+    margin-bottom: 10px;
 }
-.about{
-    font-size: 15px;
-    color: #ffffffb3;
+
+.about {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-about);
 }
-.boxImg{
-    background-color: rgb(41, 40, 57);
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
+.about span {
+    font-weight: bold;
+    color: #56599d;
+}
+.boxImg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     height: 80%;
 }
-.img{
-    width: 80%;
-    max-width: 320px;
+
+.img {
+    width: 250px;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    flex-grow: 1;
 }
+
 @media only screen and (max-width: 600px) {
-    .boxAbout{
+    .boxAbout {
         grid-template-columns: 1fr;
     }
 }
