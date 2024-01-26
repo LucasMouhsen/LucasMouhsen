@@ -19,8 +19,8 @@
   left: 0;
   z-index: 0;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .circle{
     background: linear-gradient(none);
   }
-}
+} */

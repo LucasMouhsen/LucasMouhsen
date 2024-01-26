@@ -29,7 +29,7 @@ export default function Index() {
 
             circle.style.left = `${backgroundX - circleRect.width / 2}px`;
             circle.style.top = `${backgroundY - circleRect.height / 2}px`;
-            circle.style.background = `radial-gradient(circle at ${deltaX}px ${deltaY}px, #w, transparent 50%)`;
+            circle.style.background = `radial-gradient(circle at ${deltaX}px ${deltaY}px, ${!isBackgroundDark ? '#283452' : '#f0eb9d'}, transparent 50%)`;
 
         };
 
@@ -38,7 +38,7 @@ export default function Index() {
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
         };
-    }, []);
+    }, [isBackgroundDark]);
 
     return (
         <main className="index" data-theme={!isBackgroundDark ? "dark" : "light"}>{/* Tema claro y oscuro */}
