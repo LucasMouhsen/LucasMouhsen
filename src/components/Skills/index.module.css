@@ -24,6 +24,7 @@
     font-size: 64px;
     text-align: center;
     width: 100%;
+    color: var(--color-title);
     background-color: var(--background-tittle);
 }
 .boxSkills .boxImg{

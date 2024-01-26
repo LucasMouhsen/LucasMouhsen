@@ -39,7 +39,7 @@
 .name {
     font-size: 56px;
     padding: 1rem;
-    color: var(--title-about);
+    color: var(--color-title);
     margin-bottom: 10px;
 }
 

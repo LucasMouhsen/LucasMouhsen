@@ -15,4 +15,5 @@
     text-align: center;
     width: 100%;
     background-color: var(--background-tittle);
+    color: var(--color-title);
 }
