@@ -18,7 +18,8 @@
 }
 .boxSkills .boxAbout{
     width: 100%;
-    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 .boxSkills .boxAbout .name{
     font-size: 64px;
@@ -31,7 +32,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 5rem;
 }
 .boxSkills .boxImg img {
     width: 200px;
