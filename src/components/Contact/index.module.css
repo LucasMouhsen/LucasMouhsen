@@ -7,7 +7,8 @@
 
 .boxContact .boxTittle {
     width: 100%;
-    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 
 .boxContact .boxTittle .name {
