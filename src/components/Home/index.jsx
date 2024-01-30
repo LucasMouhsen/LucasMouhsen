@@ -22,7 +22,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className={styles.boxImg}>
-                    <img className={styles.img} src="images\linkedin.png" alt="" />
+                    <img className={styles.img} src="images\linkedin.webp" alt="" />
                 </div>
             </div>
         </section>
