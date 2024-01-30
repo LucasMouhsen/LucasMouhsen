@@ -45,6 +45,7 @@
 
 /* Toggle */
 .toggle-container {
+  display: none; /* quitado hasta confuracion */
   position: absolute;
   top: -12px;
   right: .2em;
