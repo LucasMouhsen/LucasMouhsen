@@ -3,8 +3,10 @@ import { Form, Col, Alert } from 'react-bootstrap';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import styles from "./index.module.css"
+import { useState } from 'react';
 
 export default function Contact() {
+    const [loading, setLoading] = useState(false)
     const initialValues = {
         strName: '',
         strMail: '',
@@ -17,7 +19,18 @@ export default function Contact() {
         strText: Yup.string().required('El campo mensaje es obligatorio'),
     })
     const handleSubmit = (values) => {
-        console.log(values);
+        setLoading(true)
+        const { strName, strMail, strText } = values;
+        const mensaje = `${strText}\n\nMail: ${strMail}\n\nNombre: ${strName}`
+        // Número de teléfono de destino (debe incluir el código de país)
+        const phoneNumber = '+5491131890767'; // Aquí pon el número de teléfono al que quieres enviar el mensaje
+
+        // Construir la URL de WhatsApp con el mensaje y el número de teléfono
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensaje)}`;
+
+        // Redirigir al usuario a la URL de WhatsApp
+        window.location.href = whatsappURL;
+        setLoading(false)
     }
     return (
         <section className={styles.boxContact} id="contact">
@@ -92,10 +105,10 @@ export default function Contact() {
                             <div className=''>
                                 <Col md={3}>
                                     <button
-                                        className='btn btn-light w-50'
+                                        className='btn btn-dark w-50'
                                         type='submit'
                                     >
-                                        {"Enviar Mensaje"}
+                                        { !loading ? "Enviar Mensaje" : 'Cargando'}
                                     </button>
                                 </Col>
                             </div>

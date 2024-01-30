@@ -18,3 +18,6 @@
     background-color: var(--background-tittle);
     color: var(--color-title);
 }
+form{
+    text-align: -webkit-center;
+}
