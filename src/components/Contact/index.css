@@ -1,0 +1,116 @@
+.boxContact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    padding-top: 8rem;
+}
+
+.ContactContainer {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-gap: 30px;
+    color: #e9e9e9;
+
+}
+
+@media screen and (max-width: 768px) {
+    .ContactContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .boxContact .box .icons .social-icon{
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+.boxContact .boxTittle {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.boxContact .boxTittle .name {
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--background-tittle);
+    color: var(--color-title);
+}
+.boxContact .box .icons{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.boxContact .logo span {
+    color: #1eb2a6;
+    font-size: 14px;
+}
+
+.boxContact .logo p {
+    color: grey;
+    margin: 30px 0 15px 0;
+}
+
+.boxContact .logo .icon {
+    background-color: #1eb2a6;
+    color: white;
+    margin-right: 10px;
+}
+
+.boxContact h3 {
+    margin-bottom: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+.boxContact ul{
+    padding: 0;
+}
+.boxContact ul li {
+    margin-bottom: 20px;
+}
+
+.boxContact .link  {
+    text-align: center;
+}
+
+.boxContact .items {
+    margin-bottom: 30px;
+}
+
+.boxContact h4 {
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.boxContact .last ul li {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+
+.boxContact .box:last-child{
+    text-align: center;
+}
+.boxContact .box iframe{
+    width: 500px;
+    max-width: 800px;
+    height: 500px;
+
+}
+
+.legal {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    color: grey;
+    background-color: #fff;
+    z-index: 0;
+}
+
+.legal p {
+    font-size: 15px;
+}
+

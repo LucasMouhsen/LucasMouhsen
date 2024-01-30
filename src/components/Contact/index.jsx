@@ -1,122 +1,65 @@
-
-import { Form, Col, Alert } from 'react-bootstrap';
-import { Formik, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import styles from "./index.module.css"
-import { useState } from 'react';
+import FormContact from "./FormContact"
+import "./index.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faMapLocation, faFileText } from "@fortawesome/free-solid-svg-icons";
+import { SocialIcon } from 'react-social-icons'
 
 export default function Contact() {
-    const [loading, setLoading] = useState(false)
-    const initialValues = {
-        strName: '',
-        strMail: '',
-        strText: '',
-    }
-
-    const validationSchema = Yup.object({
-        strName: Yup.string().required('El campo nombre es obligatorio'),
-        strMail: Yup.string().required('El campo mail es obligatorio'),
-        strText: Yup.string().required('El campo mensaje es obligatorio'),
-    })
-    const handleSubmit = (values) => {
-        setLoading(true)
-        const { strName, strMail, strText } = values;
-        const mensaje = `${strText}\n\nMail: ${strMail}\n\nNombre: ${strName}`
-        // Número de teléfono de destino (debe incluir el código de país)
-        const phoneNumber = '+5491131890767'; // Aquí pon el número de teléfono al que quieres enviar el mensaje
-
-        // Construir la URL de WhatsApp con el mensaje y el número de teléfono
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensaje)}`;
-
-        // Redirigir al usuario a la URL de WhatsApp
-        window.location.href = whatsappURL;
-        setLoading(false)
-    }
+    const date = new Date()
+    const year = date.getFullYear();
     return (
-        <section className={styles.boxContact} id="contact">
-            <div className={styles.boxTittle}>
-                <h1 className={styles.name}>CONTACTO</h1>
+        <section className="boxContact" id="contact">
+
+            <div className="ContactContainer">
+                <FormContact />
+                <div className='box'>
+                    <h3>Mas sobre mi</h3>
+                    <ul className="icons">
+
+                        <li>
+                            <SocialIcon url="https://www.linkedin.com/in/lucasdiazmouhsen/" w />
+                        </li>
+                        <li>
+                            <SocialIcon url="htthttps://github.com/LucasMouhsen" />
+                        </li>
+                        <li>
+                            <SocialIcon url="https://www.instagram.com/lucasmouhsen/" />
+                        </li>
+                        <li>
+                            <SocialIcon url="https://x.com/LucasMouhsen" />
+                        </li>
+                    </ul>
+                    <ul className="link">
+
+                        <li>
+                            <FontAwesomeIcon icon={faPhone} />
+                            <p>+54 911 3189 0767</p>
+                        </li>
+
+                        <li>
+                            <FontAwesomeIcon icon={faFileText} />
+                            <p>info@yourdomain.com</p>
+                        </li>
+
+                        <li>
+                            <FontAwesomeIcon icon={faMapLocation} />
+                            <p>San Miguel, Buenos Aires, Argentina</p>
+                        </li>
+                    </ul>
+                </div>
+                <div className="box link">
+                    <iframe width="100%" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=San%20miguel+(San%20Miguel)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        <a href="https://www.gps.ie/car-satnav-gps/">San Miguel</a>
+                    </iframe>
+                </div>
+
             </div>
-            <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={handleSubmit}
-            >
+            <div className='legal'>
+                <p>
+                    © {year}.
+                </p>
+            </div>
 
-                {
-                    (formik) => (
-                        <Form onSubmit={formik.handleSubmit}>
-                            {
-                                formik.status && (
-                                    <Alert variant='danger' className='text-danger'>
-                                        {formik.status}
-                                    </Alert>
-                                )
-                            }
-                            <div>
-                                <Col md={3}>
-                                    <Form.Group className='mb-3'>
-                                        <Field
-                                            id="strName"
-                                            placeholder="Tu Nombre"
-                                            name="strName"
-                                            as={Form.Control}
-                                        />
-                                        <ErrorMessage
-                                            name="strName"
-                                            component={Form.Text}
-                                            className='text-danger'
-                                        />
-                                    </Form.Group>
-                                </Col>
-
-                                <Col md={3}>
-                                    <Form.Group className='mb-3'>
-                                        <Field
-                                            id="strMail"
-                                            placeholder="Tu Mail"
-                                            name="strMail"
-                                            as={Form.Control}
-                                        />
-                                        <ErrorMessage
-                                            name="strMail"
-                                            component={Form.Text}
-                                            className='text-danger'
-                                        />
-                                    </Form.Group>
-                                </Col>
-
-                                <Col md={3}>
-                                    <Form.Group className='mb-3'>
-                                        <Field
-                                            id="strText"
-                                            placeholder="Tu Mensaje"
-                                            name="strText"
-                                            as={Form.Control}
-                                        />
-                                        <ErrorMessage
-                                            name="strText"
-                                            component={Form.Text}
-                                            className='text-danger'
-                                        />
-                                    </Form.Group>
-                                </Col>
-                            </div>
-                            <div className=''>
-                                <Col md={3}>
-                                    <button
-                                        className='btn btn-dark w-50'
-                                        type='submit'
-                                    >
-                                        { !loading ? "Enviar Mensaje" : 'Cargando'}
-                                    </button>
-                                </Col>
-                            </div>
-                        </Form>
-                    )
-                }
-
-            </Formik>
         </section>
     )
 }
