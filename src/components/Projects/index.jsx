@@ -3,7 +3,6 @@ import projects from "../../data/projects.json";
 
 
 export const Projects = () => {
-    console.log(projects);
     return (
         <section className="page-content" id="projects">
             {projects && projects.map(({ id, title, imageSrc, description, skills, source }) => {
