@@ -38,7 +38,7 @@ export default function Contact() {
 
                         <li>
                             <FontAwesomeIcon icon={faFileText} />
-                            <p>info@yourdomain.com</p>
+                            <p>Lucasmouhsen@gmail.com</p>
                         </li>
 
                         <li>
