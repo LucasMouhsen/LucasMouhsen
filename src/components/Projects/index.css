@@ -133,7 +133,15 @@
   outline-offset: 3px;
 }
 
+@media screen and (max-width: 768px) {
+  .page-content {
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+  }
+}
+
 @media (hover: hover) and (min-width: 600px) {
+  
   .card:after {
     transform: translateY(0);
   }

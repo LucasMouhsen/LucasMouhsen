@@ -17,16 +17,16 @@ export default function Contact() {
                     <ul className="icons">
 
                         <li>
-                            <SocialIcon url="https://www.linkedin.com/in/lucasdiazmouhsen/" w />
+                            <SocialIcon url="https://www.linkedin.com/in/lucasdiazmouhsen/" target="_blank"w />
                         </li>
                         <li>
-                            <SocialIcon url="htthttps://github.com/LucasMouhsen" />
+                            <SocialIcon url="https://github.com/LucasMouhsen" target="_blank"/>
                         </li>
                         <li>
-                            <SocialIcon url="https://www.instagram.com/lucasmouhsen/" />
+                            <SocialIcon url="https://www.instagram.com/lucasmouhsen/" target="_blank"/>
                         </li>
                         <li>
-                            <SocialIcon url="https://x.com/LucasMouhsen" />
+                            <SocialIcon url="https://x.com/LucasMouhsen" target="_blank"/>
                         </li>
                     </ul>
                     <ul className="link">
@@ -49,7 +49,7 @@ export default function Contact() {
                 </div>
                 <div className="box link">
                     <iframe width="100%" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=San%20miguel+(San%20Miguel)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                        <a href="https://www.gps.ie/car-satnav-gps/">San Miguel</a>
+                        <a href="https://www.gps.ie/car-satnav-gps/" >San Miguel</a>
                     </iframe>
                 </div>
 

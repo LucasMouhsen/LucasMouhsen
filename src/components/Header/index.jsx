@@ -30,9 +30,9 @@ export default function Header() {
     <header className={'header'} data-scrolling={!scrolling ? "no-scroll" : "scroll"}>
       <ul className='headerList'>
         <li><a href="#home">Inicio</a></li>
+        <li><a href="#projects">Proyectos</a></li>
         <li><a href="#about">Acerca de</a></li>
         <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
         <div className="toggle-container">

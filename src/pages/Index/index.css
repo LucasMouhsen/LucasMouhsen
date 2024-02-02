@@ -19,8 +19,9 @@
   left: 0;
   z-index: 0;
 }
-/* @media only screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .circle{
-    background: linear-gradient(none);
+    background: radial-gradient(circle at 187.6px 333.6px, rgb(40, 52, 82), transparent 0) !important;
+
   }
-} */
+}

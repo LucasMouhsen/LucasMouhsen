@@ -66,9 +66,9 @@ export default function Index() {
                 <Header />
                 <Water />
                 <Home />
+                <Projects />
                 <About />
                 <Skills />
-                <Projects />
                 <Contact />
             </div>
         </main>

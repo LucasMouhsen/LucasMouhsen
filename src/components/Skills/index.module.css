@@ -38,11 +38,25 @@
     width: 200px;
     height: 200px;
     object-fit: contain;
+    /* filter sepia */
+    filter: hue-rotate(30deg);
+    filter: sepia(1) drop-shadow(15px 15px 10px black);
+    transition: all .3s;
+}
+.boxSkills .boxImg img:hover{
+    filter: sepia(0);
+    scale:  1.2;
 }
 .boxSkills .boxImg p{
     color: var(--boxImgtext);
 }
 @media only screen and (max-width: 600px) {
+    .boxSkills .boxAbout .name{
+        font-size: 45px;
+    }
+    .boxSkills .boxImg{
+        grid-template-columns: auto auto;
+    }
     .boxSkills .boxImg img {
         width: 70px;
         height: 70px;

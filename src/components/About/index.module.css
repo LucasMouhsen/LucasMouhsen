@@ -19,7 +19,7 @@
     display: grid;
     align-items: center;
     justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     height: 100%;
     padding: 2rem;
@@ -31,9 +31,9 @@
 .nameAbout {
     /* background-color: rgb(41, 40, 57); */
     width: 100%;
-    height: 80%;
+    height: 100%;
     align-self: center;
-    margin: 20px;
+    padding: 20px;
 }
 
 .name {
@@ -47,6 +47,7 @@
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-about);
+    width: 100%;
 }
 
 .about span {
@@ -55,25 +56,40 @@
 }
 
 .boxImg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
     height: 80%;
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .img {
     width: 250px;
     max-width: 250px;
     object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .img {
+        width: 150px;
+        max-width: 150px;
+    }
+
+    .name {
+        font-size: 36px;
+        padding: 1rem;
+    }
+
+    .about {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .box {
+        height: 100%;
+    }
     .boxAbout {
         grid-template-columns: 1fr;
-    }
-
-    .boxImg {
-        
     }
 }
