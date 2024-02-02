@@ -1,42 +1,39 @@
+import { useEffect, useState } from "react";
+import "./index.css";
 
-import styles from "./index.module.css"
 export default function Skills() {
-    return (
-        <section className={styles.boxSkills} id="skills">
-            <div className={styles.boxAbout}>
-                <h1 className={styles.name}>HABILIDADES</h1>
-            </div>
-            <div className={styles.boxImg}>
-                <div>
-                    <img src="images/react.svg" width={100} alt="React" />
-                    {/* <p>REACT</p> */}
-                </div>
-                <div>
-                    <img src="images/node-js.svg" width={100} alt="Node JS" />
-                    {/* <p>NODE JS</p> */}
-                </div>  
-                
-                <div>
-                    <img src="images/python.svg" width={100} alt="Python" />
-                    {/* <p>PYTHON</p> */}
-                </div>
-                
-                <div>
-                    <img src="images/mysql.svg" width={100} alt="My Sql" />
-                    {/* <p>MY SQL</p> */}
-                </div>
-                
-                <div>
-                    <img src="images/git.svg" width={100} alt="Git" />
-                    {/* <p>GIT</p> */}
-                </div>
-                
-                <div>
-                    <img src="images/powerbi.png" width={100} alt="Power Bi" />
-                    {/* <p>POWER BI</p> */}
-                </div>
-            </div>
+    const skillsImages = ['react.svg', 'node-js.svg', 'python.svg', 'mysql.svg', 'git.svg', 'powerbi.png'];
+    const [currentSkills, setCurrentSkills] = useState([]);
+    const [opacity, setOpacity] = useState(true);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setOpacity(false);
+            setTimeout(() => {
+                const selectedSkills = skillsImages.sort(() => 0.5 - Math.random());
+                setCurrentSkills(selectedSkills);
+                setOpacity(true);
+            }, 500); 
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <section className='boxSkills' id="skills">
+            <div className='boxAbout'>
+                <h1 className='name'>HABILIDADES</h1>
+            </div>
+            <div className="boxImg">
+                {currentSkills.map((image, index) => (
+                    <img
+                        key={index}
+                        src={`images/${image}`}
+                        alt={`Skill ${index}`}
+                        className={`skill-image ${opacity ? 'show' : ''}`}
+                    />
+                ))}
+            </div>
         </section>
     )
 }
