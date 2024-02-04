@@ -5,6 +5,7 @@
   --background-color: #16191d;
   --background-tittle: transparent;
   --color-title: #faebd7;
+  --gradient-colors: #76a67e 10%, #7ba39c 20%, #6c87bf 30%, #5167a8 40%, #56599d 50%, #625398 60%, #985999 70%, #b74681 80%, #d04e74 90%;
   /* HEADER */
   --background-header: hsl(214deg 14% 10% / 65%);
   --hover-header: #5167a8;
