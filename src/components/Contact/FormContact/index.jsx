@@ -2,7 +2,7 @@ import { Form, Col, Alert } from 'react-bootstrap';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useState } from 'react';
-import './index.css'
+import styles from "./index.module.css"
 
 export default function FormContact() {
     const [loading, setLoading] = useState(false)
@@ -45,15 +45,15 @@ export default function FormContact() {
                     <Form onSubmit={formik.handleSubmit}>
                         {
                             formik.status && (
-                                <Alert variant='danger' className='text-danger'>
+                                <Alert variant='danger'>
                                     {formik.status}
                                 </Alert>
                             )
                         }
                         <div>
 
-                            <div className="boxTittle">
-                                <h1 className="name">CONTACTAME</h1>
+                            <div className={styles.boxTittle}>
+                                <h1 className={styles.name}>CONTACTAME</h1>
                             </div>
                             <Form.Group className='mb-3'>
                                 <Field
@@ -88,7 +88,8 @@ export default function FormContact() {
                                     id="strText"
                                     placeholder="Tu Mensaje"
                                     name="strText"
-                                    as={Form.Control}
+                                    as='textarea'
+                                    className={styles.strText}
                                 />
                                 <ErrorMessage
                                     name="strText"
@@ -97,7 +98,7 @@ export default function FormContact() {
                                 />
                             </Form.Group>
                         </div>
-                        <div className=''>
+                        <div>
                             <Col md={3}>
                                 <button
                                     className='btn btn-dark'
@@ -115,3 +116,4 @@ export default function FormContact() {
 
     )
 }
+
