@@ -1,5 +1,5 @@
 import FormContact from "./FormContact"
-import "./index.css"
+import styles from "./index.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMapLocation, faFileText } from "@fortawesome/free-solid-svg-icons";
 import { SocialIcon } from 'react-social-icons'
@@ -8,16 +8,16 @@ export default function Contact() {
     const date = new Date()
     const year = date.getFullYear();
     return (
-        <section className="boxContact" id="contact">
+        <section className={styles.boxContact} id="contact">
 
-            <div className="ContactContainer">
+            <div className={styles.ContactContainer}>
                 <FormContact />
-                <div className='box'>
+                <div className={styles.box}>
                     <h3>Mas sobre mi</h3>
-                    <ul className="icons">
+                    <ul className={styles.icons}>
 
                         <li>
-                            <SocialIcon url="https://www.linkedin.com/in/lucasdiazmouhsen/" target="_blank"w />
+                            <SocialIcon url="https://www.linkedin.com/in/lucasdiazmouhsen/" target="_blank" />
                         </li>
                         <li>
                             <SocialIcon url="https://github.com/LucasMouhsen" target="_blank"/>
@@ -29,7 +29,7 @@ export default function Contact() {
                             <SocialIcon url="https://x.com/LucasMouhsen" target="_blank"/>
                         </li>
                     </ul>
-                    <ul className="link">
+                    <ul className={styles.link}>
 
                         <li>
                             <FontAwesomeIcon icon={faPhone} />
@@ -47,14 +47,14 @@ export default function Contact() {
                         </li>
                     </ul>
                 </div>
-                <div className="box link">
-                    <iframe width="100%" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=San%20miguel+(San%20Miguel)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                <div className={`${styles.box} ${styles.link}`}>
+                    <iframe width="100%" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=%20San%20Miguel,%20Provincia%20de%20Buenos%20Aires+(San%20Miguel)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                         <a href="https://www.gps.ie/car-satnav-gps/" >San Miguel</a>
                     </iframe>
                 </div>
 
             </div>
-            <div className='legal'>
+            <div className={styles.legal}>
                 <p>
                     © {year}.
                 </p>
