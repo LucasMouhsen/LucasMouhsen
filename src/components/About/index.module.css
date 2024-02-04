@@ -34,6 +34,10 @@
     height: 100%;
     align-self: center;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .name {
@@ -60,19 +64,20 @@
     display: grid;
     gap: .5rem;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 }
 
 .img {
-    width: 250px;
-    max-width: 250px;
+    width: 100%;
+    max-width: 350px;
     object-fit: cover;
     aspect-ratio: 1/1;
 }
 
 @media only screen and (max-width: 1200px) {
     .img {
-        width: 150px;
-        max-width: 150px;
+        width: 100%;
+        max-width: 250px;
     }
 
     .name {
@@ -81,7 +86,7 @@
     }
 
     .about {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
