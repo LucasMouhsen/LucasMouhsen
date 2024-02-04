@@ -1,0 +1,134 @@
+/* Estilos para .projects */
+.projects {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, var(--gradient-colors));
+  border-image-slice: 1;
+  display: grid;
+  grid-gap: 1rem;
+  place-items: center;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+
+/* Estilos para .projetsCard */
+.projects .projetsCard {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  background-size: cover;
+  background-position-x: center;
+}
+
+/* Media queries */
+@media (min-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pseudo-elementos */
+.projects .projetsCard:before,
+.projects .projetsCard:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.projects .projetsCard:before {
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: all .3s;
+  pointer-events: none;
+}
+
+.projects .projetsCard:after {
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: all .3s;
+}
+
+/* Estilos para .content */
+.projects .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: all .3s;
+  z-index: 1;
+  color: #ddd;
+}
+
+.projects .content>*+* {
+  margin-top: 1rem;
+}
+
+.projects .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.projects .copy {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.projects .projetsImage {
+  width: 100px;
+  opacity: 1;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+  }
+}
+
+/* Media query para dispositivos con hover */
+@media (hover: hover) and (min-width: 600px) {
+  .projects .content {
+    transform: translateY(0);
+  }
+
+  .projects .projetsCard:hover .content,
+  .projects .projetsCard:focus-within .content,
+  .projects .projetsCard:after {
+    transform: translateY(0);
+    
+  }
+  .projects .projetsCard:hover:after,
+  .projects .projetsCard:focus-within:after {
+    transform: translateY(-40%);
+  }
+
+  .projects .content>*:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all .3s;
+  }
+
+  .projects .projetsCard:hover .content>*:not(.title),
+  .projects .projetsCard:focus-within .content>*:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

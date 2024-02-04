@@ -1,7 +1,9 @@
-import './index.css'
+
+import styles from "./index.module.css"
+
 export default function Water() {
     return (
-        <svg version="1.0" className="image-background" xmlns="http://www.w3.org/2000/svg"
+        <svg version="1.0" className={styles.imageBackground} xmlns="http://www.w3.org/2000/svg"
  width="1666.000000pt" height="3852.000000pt" viewBox="0 0 1666.000000 3852.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>

@@ -1,28 +1,30 @@
-import "./index.css";
+import styles from "./index.module.css"
 import projects from "../../data/projects.json";
 
 
 export const Projects = () => {
     return (
-        <section className="page-content" id="projects">
+        <section className={styles.projects} id="projects">
             {projects && projects.map(({ id, title, imageSrc, description, skills, source }) => {
                 return (
-                    <div className="card" key={id}
+                    <div className={styles.projetsCard} key={id}
                         style={{ backgroundImage: `url('${imageSrc}')` }}>
-                        <div className="content">
-                            <h2 className="title">{title}</h2>
-                            <p className="copy">
+                        <div className={styles.content}>
+                        <h2 className={styles.title}>{title}</h2>
+                            <p className={styles.copy}>
                                 {description}
                             </p>
-                            <p className="copy">
+                            <p className={styles.copy}>
                                 {skills.map(
-                                    skill =>{
-                                        return skill+' '
+                                    (skill, index) =>{
+                                        return (
+                                            <img key={index} className={styles.projetsImage} src={`images/${skill}`} alt={skill} />
+                                        )
                                     }
                                 )}
                             </p>
 
-                            <a href={source} className="btn">View Trips</a>
+                            <button onClick={() => {window.open(source, '_blank')}}  className="btn btn-dark">View Trips</button>
                         </div>
                     </div>
                 )

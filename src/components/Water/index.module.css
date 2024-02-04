@@ -1,0 +1,12 @@
+
+.imageBackground{
+    color: #fff;
+    height: 130px;
+    width: 55px;
+    opacity: .3;
+    position: fixed;
+    right: 40px;
+    bottom: .3rem;
+    transform: translate(50%);
+    z-index: 2;
+  }
