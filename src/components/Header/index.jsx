@@ -1,6 +1,4 @@
-/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from "@fortawesome/free-regular-svg-icons" */
-import './index.css'
+import styles from "./index.module.css"
 import { useEffect, useState } from 'react';
 import { useDark } from '../../hooks/useDark';
 
@@ -27,20 +25,20 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={'header'} data-scrolling={!scrolling ? "no-scroll" : "scroll"}>
-      <ul className='headerList'>
+    <header className={styles.header} data-scrolling={!scrolling ? "no-scroll" : "scroll"}>
+      <ul className={styles.headerList}>
         <li><a href="#home">Inicio</a></li>
         <li><a href="#projects">Proyectos</a></li>
         <li><a href="#about">Acerca de</a></li>
         <li><a href="#skills">Habilidades</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
-        <div className="toggle-container">
+        <div className={styles.toggleContainer}>
           {/* Input de tipo checkbox para cambiar el tema, con un manejador de clic en toggleBg */}
           <input
             type="checkbox"
             id="check"
-            className="toggle"
+            className={styles.toggle}
             onClick={toggleBg}
           />
           <label htmlFor="check"></label>
