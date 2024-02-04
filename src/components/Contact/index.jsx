@@ -56,7 +56,7 @@ export default function Contact() {
             </div>
             <div className={styles.legal}>
                 <p>
-                    © {year}.
+                    © Lucas Mouhsen {year}.
                 </p>
             </div>
 
