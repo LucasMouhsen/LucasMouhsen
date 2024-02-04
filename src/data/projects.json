@@ -5,11 +5,10 @@
         "imageSrc": "images/aliMusic/home.png",
         "description": "CRUD Ecommerce realizado como proyecto entre 3 personas",
         "skills": [
-            "Express",
-            "Node",
-            "Sass",
-            "Ejs",
-            "MySql"
+            "node-js.svg",
+            "sass.svg",
+            "ejs.svg",
+            "mysql.svg"
         ],
         "source": "https://github.com/LucasMouhsen/ali-music-lucas"
     },
@@ -19,9 +18,9 @@
         "imageSrc": "images/pos/home.png",
         "description": "Buscador de obra social por DNI",
         "skills": [
-            "React",
-            "Express",
-            "Node"
+            "react.svg",
+            "node-js.svg",
+            "mysql.svg"
         ],
         "source": "https://github.com/LucasMouhsen/pos"
     },
@@ -31,9 +30,8 @@
         "imageSrc": "images/drinkApp/home.png",
         "description": "Ecommerce e infomacion de bebidas",
         "skills": [
-            "React",
-            "Express",
-            "Node"
+            "react.svg",
+            "node-js.svg"
         ],
         "source": "https://github.com/LucasMouhsen/drinkApp"
     },
@@ -43,10 +41,10 @@
         "imageSrc": "images/hc/home.png",
         "description": "CRUD Registro de documentacion",
         "skills": [
-            "Express",
-            "Node",
-            "MySql",
-            "Ejs"
+            "node-js.svg",
+            "mysql.svg",
+            "ejs.svg",
+            "sass.svg"
         ],
         "source": "https://github.com/LucasMouhsen/Historias-Clinicas"
     }
