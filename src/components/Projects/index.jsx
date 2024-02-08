@@ -24,7 +24,7 @@ export const Projects = () => {
                                 )}
                             </p>
 
-                            <button onClick={() => {window.open(source, '_blank')}}  className="btn btn-dark">View Trips</button>
+                            <button onClick={() => {window.open(source, '_blank')}}  className="btn btn-dark">Ver GitHub</button>
                         </div>
                     </div>
                 )
